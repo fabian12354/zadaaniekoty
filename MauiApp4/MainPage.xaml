@@ -1,39 +1,41 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiApp4.MainPage">
 
     <ScrollView>
-            <VerticalStackLayout
-            Padding="30,0"
-            Spacing="25">
-                
-                <Entry
-                Placeholder="co kot ma mowic?"
-                x:Name="entTekst"
-                />
-                <HorizontalStackLayout>
-                    <Label Text="Kolor napisu: " />
-                    <RadioButton Content="Red" x:Name="rbtRed" />
-                    <RadioButton Content="Blue" x:Name="rbtBlue" />
-                    <RadioButton Content="Green" x:Name="rbtGreen" />
-                </HorizontalStackLayout>
-                <Button
-                x:Name="CounterBtn"
-                Text="chcę kota!" 
+        <VerticalStackLayout Padding="30,0" Spacing="25">
 
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Fill" />
 
-            <Image
-                Source="dotnet_bot.png"
-                x:Name="imgCat"
-                HeightRequest="400"
-                Aspect="AspectFit"
-                 />
+            <Entry Placeholder="co kot ma mówić?" x:Name="entTekst" />
+
+       
+            <HorizontalStackLayout>
+                <Label Text="Kolor napisu: " />
+                <RadioButton Content="Red" x:Name="rbtRed" />
+                <RadioButton Content="Blue" x:Name="rbtBlue" />
+                <RadioButton Content="Green" x:Name="rbtGreen" />
+            </HorizontalStackLayout>
+
+        
+            <Button x:Name="CounterBtn"
+                    Text="Chcę kota!"
+                    Clicked="OnCounterClicked"
+                    HorizontalOptions="Fill" />
+
+            
+            <Image Source="dotnet_bot.png"
+                   x:Name="imgCat"
+                   HeightRequest="400"
+                   WidthRequest="400"
+                   Aspect="AspectFit" />
+
+            <Slider x:Name="sizeSlider"
+                    Minimum="100"
+                    Maximum="800"
+                    Value="400"
+                    ValueChanged="OnSliderValueChanged" />
 
         </VerticalStackLayout>
-        </ScrollView>
-
-    
+    </ScrollView>
 </ContentPage>
